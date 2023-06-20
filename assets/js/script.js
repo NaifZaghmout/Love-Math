@@ -38,7 +38,22 @@ function checkAnswer() {
 
 }
 
+
+/**
+ * get the operands (the numbers) and the operator (+ , - , etc)
+ * dirctly from the DOM , and returns the correct answer .
+ */
+
 function calculateCorrectAnswer() {
+let operand1 = parseInt (Document.getElementById('operand1').innerText);
+let operand2 = parseInt (Document.getElementById('operand2').innerText);
+let operator = document.getElementById('operator').innerText;
+
+if (operator==="+") {
+    return[operand1 , operand2 ,"addition"];
+} else { alert('unimplemented operator ${operator}');
+throw 'unimplemented operator ${operator}. Aborting!'
+}
 
 }
 
